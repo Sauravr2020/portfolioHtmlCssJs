@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saurav - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Saurav's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          <div>Hi, My name is <span class="purple">Saurav</span></div>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button id="download-resume" class="btn btn-download-resume">
+              Download Resume
+            </button>
+
+            <button id="github-link" class="btn">Visit Github</button>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="img/dev.png" alt="" />
+        </div>
+      </section>
+      <hr />
+      <section class="secondSection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Work Experience</h1>
+
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="img/html.png" alt="" />
+            <div class="vertical-title">Html Developer (2010-2012)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam,
+              aliquid expedita. Natus exercitationem aliquid, sapiente, iusto
+              voluptatibus culpa nihil ea ab doloribus eos sequi libero!
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="img/nodejs.png" alt="" />
+            <div class="vertical-title">Node.js Developer (2012-2014)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam,
+              aliquid expedita. Natus exercitationem aliquid, sapiente, iusto
+              voluptatibus culpa nihil ea ab doloribus eos sequi libero!
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="img/js.png" alt="" />
+            <div class="vertical-title">JS Developer (2010-2012)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam,
+              aliquid expedita. Natus exercitationem aliquid, sapiente, iusto
+              voluptatibus culpa nihil ea ab doloribus eos sequi libero!
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="img/developer.png" alt="" />
+            <div class="vertical-title">Html Developer (2010-2012)</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam,
+              aliquid expedita. Natus exercitationem aliquid, sapiente, iusto
+              voluptatibus culpa nihil ea ab doloribus eos sequi libero!
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h3>Saurav Developer Portfolio</h3>
+        </div>
+        <div class="footer-second">
+          <ul>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+          </ul>
+        </div>
+        <div class="footer-third">
+          <ul>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+          </ul>
+        </div>
+        <div class="footer-forth">
+          <ul>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">
+        Copyright &#169; sauravportfolio.com | All rights reserved
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web Developer",
+          "Graphic Designer",
+          "Web Designer",
+          "Video Editor",
+        ],
+        typeSpeed: 50,
+      });
+
+      // Get the download resume button element
+      var downloadBtn = document.getElementById("download-resume");
+
+      // Add event listener to the button
+      downloadBtn.addEventListener("click", function () {
+        // Replace the URL with the actual URL of your resume file
+        var resumeURL = "https://in.docworkspace.com/d/sIA2U5IY-pZ6-sQY";
+
+        // Create a temporary anchor element
+        var tempLink = document.createElement("a");
+
+        // Set the href attribute with the resume URL
+        tempLink.href = resumeURL;
+
+        // Set the download attribute to force download
+        tempLink.setAttribute("download", "Saurav_Resume.pdf");
+
+        // Hide the anchor element
+        tempLink.style.display = "none";
+
+        // Append the anchor element to the body
+        document.body.appendChild(tempLink);
+
+        // Trigger the click event to start download
+        tempLink.click();
+
+        // Remove the anchor element from the body
+        document.body.removeChild(tempLink);
+      });
+
+      // Get the GitHub button element
+      var githubBtn = document.getElementById("github-link");
+
+      // Add event listener to the button
+      githubBtn.addEventListener("click", function () {
+        // Replace the URL with your GitHub profile URL
+        var githubURL = "https://github.com/Sauravr2020";
+
+        // Open the GitHub URL in a new tab
+        window.open(githubURL, "_blank");
+      });
+    </script>
+  </body>
+</html>
